@@ -1,0 +1,23 @@
+muestra redes vlan
+  show vlan
+
+muestra puertos
+  show ports
+
+crear cuenta
+create account user user_name username contraseña
+
+crear red vlan
+  create vlan nombre_vlan tag #num_vlan
+
+añadir puertos a la red
+  configure nombre_vlan add ports rango_puertos tagged
+
+asignar nombre de switch
+  configure snmp sysName nombre_switch
+
+Guardar
+  save
+
+asignar ip al switch
+  configure default ipaddress 10.0.0.1/24

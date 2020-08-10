@@ -1,0 +1,98 @@
+1.3.3: Enrutamiento estático
+
+Introducción
+
+Los routers pueden detectar redes remotas mediante el enrutamiento dinámico o estático. Esta actividad se enfoca en la manera en que las redes remotas se agregan a la tabla de enrutamiento utilizando rutas estáticas. Ésta es una de las dos formas en las que una red remota puede agregarse a una tabla de enrutamiento. El administrador de red configura las rutas estáticas que incluyen la dirección de red y la máscara de subred de la red remota, junto con la dirección IP del router del siguiente salto o la interfaz de salida del router local.
+
+Objetivos de aprendizaje:
+
+Describir la función de la tabla de enrutamiento.
+Describir de qué manera una tabla de enrutamiento puede contener y utilizar rutas estáticas.
+Tarea 1:
+
+Ingresar una ruta estática en R3 para alcanzar la LAN de R1 Todas las interfaces del router están configuradas y en funcionamiento. Sin embargo, no es posible alcanzar la LAN de R1 desde R3. Siga estos pasos para introducir una ruta estática en R3 para alcanzar la LAN de R1:
+
+Paso 1: Configure una ruta estática en R3. 
+Haga clic en R3 en el espacio de trabajo.
+Seleccione la ficha CLI.
+Desde la interfaz de línea de comandos (CLI), ingrese los siguientes comandos:
+Contraseña:cisco
+R3>enable
+Contraseña: class
+R3#show ip route
+(Nota: la tabla de enrutamiento muestra las rutas conectadas directamente pero no existen rutas estáticas para las redes remotas en la tabla de enrutamiento).
+R3#configure terminal
+R3(config)#ip route 192.168.1.0 255.255.255.0 192.168.3.1
+R3(config)#end
+Paso 2: Examine la tabla de enrutamiento en R3. 
+Desde CLI, ingrese los siguientes comandos:
+R3#show ip route
+¿Existe alguna ruta estática en la tabla de enrutamiento? En tal caso, enumere las rutas a continuación:
+_____________________________________________________
+Si no existen rutas en la tabla de enrutamiento, repita los pasos y resuelva el problema.
+Paso 3: Haga ping desde R3 a PC1.
+Haga clic en R3 en el espacio de trabajo.
+Seleccione la ficha CLI.
+Desde CLI, ingrese los siguientes comandos:
+R3#ping 192.168.1.10
+¿El ping fue exitoso? (Si el ping no fue exitoso es porque no existe una ruta en R1 para alcanzar R3).
+Tarea 2:
+
+Introducir una ruta estática en R1 para alcanzar R3
+Siga estos pasos para introducir una ruta estática en R1 para alcanzar R3:
+Paso 1: Configure una ruta estática en R1.
+Haga clic en R1 en el espacio de trabajo.
+Seleccione la ficha CLI.
+Desde CLI, ingrese los siguientes comandos:
+Contraseña:cisco 
+R1>enable
+Contraseña: class
+R1#show ip route
+(Nota: la tabla de enrutamiento muestra las rutas conectadas directamente pero no existen rutas estáticas para las redes remotas en la tabla de enrutamiento).
+R1#configure terminal
+R1(config)#ip route 192.168.3.0 255.255.255.0 FastEthernet 0/1
+R1(config)#end
+Paso 2: Examine la tabla de enrutamiento en R1.
+Desde CLI, ingrese los siguientes comandos:
+R1#show ip route
+¿Existe alguna ruta estática en la tabla de enrutamiento? En tal caso, enumere las rutas a continuación:
+_____________________________________________________
+Si no existen rutas en la tabla de enrutamiento, repita los pasos y resuelva el problema.
+
+Paso 3: Haga ping desde R3 a PC1.
+Haga clic en R3 en el espacio de trabajo.
+Seleccione la ficha CLI.
+Desde CLI, ingrese los siguientes comandos:
+R3#ping 192.168.1.10
+¿El ping fue exitoso? (Ayuda: si el ping no es exitoso, verifique las tablas de enrutamiento en los tres routers para detectar el problema). 
+Tarea 3:
+
+Ingresar una ruta estática en R2 para alcanzar la LAN de R1
+Siga estos pasos para introducir una ruta estática en R2 para alcanzar la LAN de R1:
+Paso 1: Configure una ruta estática en R2.
+Haga clic en R2 en el espacio de trabajo.
+Seleccione la ficha CLI.
+Desde CLI, ingrese los siguientes comandos:
+Contraseña: cisco 
+R2>enable
+Contraseña: class
+R2#show ip route
+(Nota: la tabla de enrutamiento muestra las rutas conectadas directamente pero no existen rutas estáticas para las redes remotas en la tabla de enrutamiento).
+R2#configure terminal
+R2(config)#ip route 192.168.1.0 255.255.255.0 FastEthernet 0/0
+R2(config)#end
+Paso 2: Examine la tabla de enrutamiento en R2.
+Desde CLI, ingrese los siguientes comandos:
+R2#show ip route
+¿Existe alguna ruta estática en la tabla de enrutamiento? En tal caso, enumere las rutas a continuación:
+_____________________________________________________
+Si no existen rutas en la tabla de enrutamiento, repita los pasos y resuelva el problema.
+Paso 3: Haga ping desde R3 a PC1.
+Haga clic en R3 en el espacio de trabajo.
+Seleccione la ficha CLI.
+Desde CLI, ingrese los siguientes comandos:
+R3#ping 192.168.1.10
+¿El ping fue exitoso? (Ayuda: este ping debe tener éxito. Si el ping no es exitoso, verifique las tablas de enrutamiento en los tres routers para detectar el problema).
+Paso 4: Verifique los resultados en la ventana de actividad.
+
+Al terminar esta actividad, el porcentaje de finalización debe ser 100%. Si el porcentaje de finalización no es 100%, utilice el botón Check Results y resuelva los problemas según sea necesario. 

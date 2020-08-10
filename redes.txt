@@ -1,0 +1,47 @@
+Empresas SkyNet Corp. lo ha contratado para implementar una red de datos en su organización.
+La empresa se organiza de la siguiente manera:
+4 oficinas sucursales distribuidas en Nogales, Caborca, Santa Ana y Obregon y 1 oficina central en Hermosillo.
+
+En Hermosillo requiere lo siguiente:
+Una red especial para la dirección de al menos 10 nodos.
+Una red para el área de contabilidad y nómina de al menos 30 nodos.
+Una red para el área de compras y recursos humanos de al menos 15 nodos.
+Una red para el área de almacén y producción de al menos 10 nodos.
+
+En Nogales requiere lo siguiente:
+Una red especial para la dirección de al menos 5 nodos.
+Una red para el área de contabilidad y nómina de al menos 10 nodos.
+Una red para el área de compras y recursos humanos de al menos 5 nodos.
+Una red para el área de almacén y producción de al menos 10 nodos.
+
+En Caborca requiere lo siguiente:
+Una red especial para la dirección de al menos 2 nodos.
+Una red para el área de contabilidad y nómina de al menos 2 nodos.
+Una red para el área de compras y recursos humanos de al menos 2 nodos.
+Una red para el área de almacén y producción de al menos 5 nodos.
+
+En Santa Ana requiere lo siguiente:
+Una red especial para la dirección de al menos 2 nodos.
+Una red para el área de contabilidad y nómina de al menos 2 nodos.
+Una red para el área de compras y recursos humanos de al menos 2 nodos.
+Una red para el área de almacén y producción de al menos 5 nodos.
+
+En Obregon requiere lo siguiente:
+Una red especial para la dirección de al menos 5 nodos.
+Una red para el área de contabilidad y nómina de al menos 10 nodos.
+Una red para el área de compras y recursos humanos de al menos 5 nodos.
+Una red para el área de almacén y producción de al menos 10 nodos.
+
+Para las oficinas de Hermosillo la empresa a adquirido una ip pública 185.21.25.125/24 mediante la cual puede ofrecer servicios desde y hacia internet. Las 4 sucursales deberán de ir hasta la red de Hermosillo para salir a Internet.
+
+Nota: Debe de haber comunicación entre la oficina central y las oficinas sucursales.
+
+Diseña la topología requerida para esta red.
+Enlista detalladamente cuanto hardware y material se necesitará para implementar esta red. 
+Diseña el esquema de direccionamiento de red que tendrá cada una de las oficinas.
+Muestra como se realizará la configuración de los switches y routers en cada una de las oficinas.
+
+Entrega:
+Topología de red con direccionamiento.
+Lista de materiales.
+Muestra de la configuración del router y al menos un switch de cada oficina.
